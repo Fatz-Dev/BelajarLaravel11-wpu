@@ -21,6 +21,50 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Cloning and Running BelajarLaravel11-wpu
+
+Jika ingin meng-clone dan menjalankan project **BelajarLaravel11-wpu** (Laravel 11), ikuti langkah-langkah berikut:
+
+### 1. Clone Repository
+```sh
+git clone https://github.com/username/BelajarLaravel11-wpu.git
+cd BelajarLaravel11-wpu
+```
+
+### 2. Install Dependencies
+```sh
+composer install
+npm install
+```
+
+### 3. Copy File .env dan Konfigurasi
+```sh
+cp .env.example .env
+php artisan key:generate
+```
+Edit file `.env` dan sesuaikan pengaturan database:
+```ini
+DB_CONNECTION=sqlite
+DB_DATABASE=/path/to/database.sqlite
+```
+Buat file database SQLite jika belum ada:
+```sh
+touch database/database.sqlite
+```
+
+### 4. Jalankan Migrasi Database
+```sh
+php artisan migrate
+```
+
+### 5. Jalankan Server
+```sh
+php artisan serve
+```
+Akses aplikasi di browser: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
@@ -64,3 +108,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
